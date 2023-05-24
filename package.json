@@ -1,28 +1,27 @@
 {
   "name": "ember-v2-addon-makefile-demo",
   "version": "0.0.0",
-  "description": "The default blueprint for Embroider v2 addons.",
+  "description": "Demonstrate that you can use `make` instead of rollup.",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/NullVoxPopuli/ember-v2-addon-makefile-demo",
   "license": "MIT",
-  "author": "",
+  "author": "NullVoxPopuli",
   "files": [
     "addon-main.cjs",
     "dist"
   ],
   "scripts": {
-    "build": "rollup --config",
+    "build": "make",
     "lint": "concurrently 'npm:lint:*(!fix)' --names 'lint:'",
     "lint:fix": "concurrently 'npm:lint:*:fix' --names 'fix:'",
     "lint:hbs": "ember-template-lint . --no-error-on-unmatched-pattern",
     "lint:js": "eslint . --cache",
     "lint:hbs:fix": "ember-template-lint . --fix --no-error-on-unmatched-pattern",
     "lint:js:fix": "eslint . --fix",
-    "start": "rollup --config --watch",
-    "test": "echo 'A v2 addon does not have tests, run tests in test-app'",
-    "prepack": "rollup --config"
+    "start": "watch make",
+    "prepack": "make"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.0.0"
@@ -33,8 +32,6 @@
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-decorators": "^7.17.0",
     "@babel/plugin-syntax-decorators": "^7.17.0",
-    "@embroider/addon-dev": "^3.0.0",
-    "@rollup/plugin-babel": "^5.3.0",
     "concurrently": "^7.2.1",
     "ember-template-lint": "^4.0.0",
     "eslint": "^7.32.0",
@@ -42,9 +39,7 @@
     "eslint-plugin-ember": "^10.5.8",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1",
-    "rollup": "^2.67.0",
-    "rollup-plugin-copy": "^3.4.0"
+    "prettier": "^2.5.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
