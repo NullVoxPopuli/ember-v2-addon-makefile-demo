@@ -27,9 +27,11 @@
     "@embroider/addon-shim": "^1.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.5",
     "@babel/core": "^7.17.0",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-class-static-block": "^7.21.0",
     "@babel/plugin-proposal-decorators": "^7.17.0",
     "@babel/plugin-syntax-decorators": "^7.17.0",
     "concurrently": "^7.2.1",
@@ -53,7 +55,7 @@
     "main": "addon-main.cjs"
   },
   "exports": {
-    ".": "./dist/index.js", 
+    ".": "./dist/index.js",
     "./*": "./dist/*.js",
     "./addon-main.js": "./addon-main.cjs"
   }
